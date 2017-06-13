@@ -40,6 +40,7 @@ FROM
  SELECT id,name from #source 
 	   )Source 
  ON Source.id = Target.id
+ AND TARGET.IsActiveRecord=1
 
  WHEN NOT MATCHED BY TARGET THEN
  INSERT (	
